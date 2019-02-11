@@ -1,0 +1,50 @@
+body {
+    padding-top: 5rem;
+  }
+  
+body, html {
+    height: 100%;
+  }
+ 
+.section {
+    margin: 1rem;
+    padding: 2rem;
+    background-color: lightblue;
+    border-radius: 2em;
+}
+  
+.bgimg {
+    height: 100%;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* fixed in viewport */
+}
+#pngcircle{
+    float:right;
+}
+h2{
+    color:blue;
+}
+h3{
+    color:brown;
+}
+h4{
+    color:gold;
+}
+h6{
+    color:burlywood;
+}
+section{
+    margin:1rem;
+    padding:2rem;
+    background-color: greenyellow;
+    border-radius: 2em;
+}
+.round-circle{
+    width:16rem;
+    height:16rem;
+    margin:1rem;
+    align-content: center;
+}
