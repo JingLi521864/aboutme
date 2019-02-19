@@ -43,9 +43,22 @@
     </nav>
 
     <main>
+        <h1>Calculate from Fahrenheit to Centigrade</h1>
 
-
-
+        <section>
+            <p>
+                <label>Fahrenheit:</label>
+                <input id="fvalue" type="number" placeholder="Fahrenheit" oninput="tempConverter(this.value)"
+                    onchange="tempConverter(this.value)">
+            </p>
+            <p>Centigrade: <span id="value"></span></p>
+        </section>
+        <script>
+            function tempConverter(fahr) {
+                valueFahr = parseFloat(fahr);
+                document.getElementById("value").innerHTML = (5/9) * (fahr - 32);
+            }
+        </script>
     </main>
 
 
@@ -62,6 +75,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script src="./script/ftoccalc.js"></script>
 </body>
 
 </html>
