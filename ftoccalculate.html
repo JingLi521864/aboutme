@@ -59,9 +59,28 @@
         <script>
             function tempConverter(fahr) {
                 valueFahr = parseFloat(fahr);
-                document.getElementById("value").innerHTML = (5/9) * (fahr - 32);
+                document.getElementById("value").innerHTML = (5 / 9) * (fahr - 32);
             }
         </script>
+
+        <div id="demo">
+            <h2>Here are some message</h2>
+            <button type="button" onclick="loadDoc()">Click Me</button>
+        </div>
+        <script>
+            function loadDoc() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("demo").innerHTML =
+                            this.responseText;
+                    }
+                };
+                xhttp.open("GET", "in_this.txt", true);
+                xhttp.send();
+            }
+        </script>
+
     </main>
 
 
