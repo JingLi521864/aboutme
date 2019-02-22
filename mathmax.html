@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="./css/jing.css">
 
-    <title>FtoC Calculate</title>
+    <title>Math Max</title>
 
 </head>
 
@@ -46,22 +46,36 @@
     </nav>
 
     <main>
-        <h1>Calculate from Fahrenheit to Centigrade</h1>
-
         <section>
-            <p>
-                <label>Fahrenheit:</label>
-                <input id="fvalue" type="number" placeholder="Fahrenheit" oninput="tempConverter(this.value)"
-                    onchange="tempConverter(this.value)">
-            </p>
-            <p>Centigrade: <span id="value"></span></p>
+            <main class="container-fluid">
+
+                <h1>Find the Max!</h1>
+
+                <p>Enter first number:
+                    <input id="first" type="number" oninput="mathMax(this.value)" onchange="mathMax(this.value)">
+                </p>
+
+                <p>Enter second number:
+                    <input id="second" type="number" oninput="mathMax(this.value)" onchange="mathMax(this.value)">
+                </p>
+
+                <button id="clicker" class="btn btn-primary">Click me!</button>
+
+                <p>Max: <span id="value"></span></p>
         </section>
-        <script>
-            function tempConverter(fahr) {
-                valueFahr = parseFloat(fahr);
-                document.getElementById("value").innerHTML = (5/9) * (fahr - 32);
-            }
-        </script>
+    </main>
+
+    <script>
+        function mathMax(first, second) {
+            first = Number(document.getElementById("first").value)
+
+            second = Number(document.getElementById("second").value)
+
+            value = Math.max(first, second);
+
+            document.getElementById("value").innerHTML = Math.max(first, second);
+        }
+    </script>
     </main>
 
 
