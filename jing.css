@@ -10,7 +10,7 @@ body, html {
     margin: 1rem;
     padding: 2rem;
     background-color: lightblue;
-    border-radius: 2em;
+    border-radius: 0;
 }
   
 .bgimg {
